@@ -1,0 +1,22 @@
+* {
+    font-family: "Poppins",Sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: white;
+}
+
+.titulo-inicio {
+    color: rgb(39, 35, 35);
+    text-align: center;
+    font-size: 4em;
+    background-image: url(../imagenes/inicio.webp);
+    height: 90vh;
+    width: 100%;
+    /* margin-left: 150px; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

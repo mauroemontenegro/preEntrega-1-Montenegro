@@ -1,57 +1,63 @@
-let remeraOver = 3000; alert("La remera Overzise tiene un valor de $3000");
-let pantalon = 5000; alert("el pantalon tiene un valor de $5000");
-let agregarAlCarrito = parseInt(prompt("Agregar al carrito 1= remera Overzise, 2= pantalon 3= ambos"))
-let resultado = remeraOver + pantalon;
-let precioActual = resultado;
-let descuento = 10;
+const productos = [
+    { id: 1, nombre: "remera oversize", precio: 5999 },
+    { id: 2, nombre: "musculosa cerrada", precio: 4299 },
+    { id: 3, nombre: "musculosa abierta", precio: 4299 },
+    { id: 4, nombre: "remera slim fit", precio: 4499 },
+];
+let carrito = [];
 
-for(prendasDisponibles = 5 ; prendasDisponibles >= 0 ; prendasDisponibles--){  
-    document.write("Quedan"+ " " + prendasDisponibles + " " + "prendas disponibles" + "<br>");
+let disponibles = productos.map(
+    (producto) => producto.nombre + "  ");
+    alert(`Productos Disponibles
+    ${disponibles}`);
+let nombre = prompt("ingrese nombre del producto"); {
+    for (const producto of productos) {
+            if (producto.nombre === nombre) {
+                let mensaje = `
+                  id:${producto.id} 
+                  nombre:${producto.nombre}
+                  precio:$${producto.precio}
+                  `;
+                alert(mensaje);
+            }
+        };
 };
-
-if(agregarAlCarrito === 1){
-    alert("Total a pagar $3000")
-}else if(agregarAlCarrito === 2){
-    alert("Total a pagar $5000")
-}else{
-    let resultado = remeraOver + pantalon;
-    alert(`su coste final es de $${resultado}`)
+let precio = 0;
+if(nombre === "Remera Oversize" || nombre === "Musculosa Cerrada" || nombre === "Musculosa Abierta" || nombre === "Remera Slim Fit"){  
+    switch(nombre){
+            case "Remera Oversize":
+            precio = 5999
+            break;
+            case "Musculosa Cerrada":
+            precio = 4299
+            break;
+            case "Musculosa Abierta":
+            precio = 4299
+            break;
+            case "Remera Slim Fit":
+            precio = 4499
+            break;
+            default:
+                break;
+        }
+        let unidades = parseInt((prompt("Cuantas Unidades solicita")))
+        carrito.push({nombre,unidades,precio});  
+    }else {
+        alert("no contamos con ese producto")
+    };
+    nombre = parseInt(prompt("1 = Para finalizar la compra"));
+    if(nombre === 1){
+        carrito.forEach((carritoFinal) =>{
+            alert(`
+            producto:${carritoFinal.nombre}
+            unidades: ${carritoFinal.unidades}
+            total a pagar:$${carritoFinal.unidades * carritoFinal.precio}
+            `)
+            alert("Gracias por elegirnos, hasta pronto.")
+        })
+    }else{
+        alert("No existe esa opcion.")
 };
-
-const validarCliente = (posicion)=>{
-    if(posicion === 1){
-        alert("Por ser la primer persona en comprar tenes un descuento disponible");
-    }else{
-        alert("no hay descuentos disponibles");
-    }if (agregarAlCarrito === 1 && posicion === 1){
-        let precioFinal = remeraOver - descuento;
-        alert(`coste final es de $${precioFinal}`)
-    }else if(agregarAlCarrito === 2 && posicion === 1){
-        let precioFinal = pantalon - descuento;
-        alert(`coste final $${precioFinal}`)
-    }else if(agregarAlCarrito === 3 && posicion === 1){
-        precioFinal = resultado - descuento;
-        alert(`coste final es de ${precioFinal}`)
-    }else{
-        alert(`no hay descuentos disponible`)
-    }
-}; 
-validarCliente(1);
-
-// no va
- // if(prendasDisponibles === 0){
-    //    alert("No tenemos esta prenda disponibles");
-    // //    document.write(prendasDisponibles + "<br>")
-    // }else{
-    //     alert("Tenemos esta prenda disponible");
-    //     document.write(prendasDisponibles )
-    //     break
-    // }
-// if(prendasDisponibles === 0){
-    //     alert("No tenemos esta prenda disponibles");
-    //  }else{
-    //      alert("Tenemos esta prenda disponible");
-    //  } 
 
 
 
