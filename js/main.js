@@ -23,18 +23,18 @@ let nombre = prompt("ingrese nombre del producto"); {
         };
 };
 let precio = 0;
-if(nombre === "Remera Oversize" || nombre === "Musculosa Cerrada" || nombre === "Musculosa Abierta" || nombre === "Remera Slim Fit"){  
+if(nombre === "remera oversize" || nombre === "musculosa cerrada" || nombre === "musculosa abierta" || nombre === "remera slim fit"){  
     switch(nombre){
-            case "Remera Oversize":
+            case "remera oversize":
             precio = 5999
             break;
-            case "Musculosa Cerrada":
+            case "musculosa cerrada":
             precio = 4299
             break;
-            case "Musculosa Abierta":
+            case "musculosa abierta":
             precio = 4299
             break;
-            case "Remera Slim Fit":
+            case "remera slim fit":
             precio = 4499
             break;
             default:
