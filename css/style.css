@@ -7,57 +7,66 @@
 body {
     background-color: white;
 }
-
+header{
+    width: 100%;
+    height: 108px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
 .logo {
     height: 90px;
     width: 200px;
     margin: 15px 20px;
     display: flex;
     flex-direction: row;
-    position: absolute;
-    z-index: 1;
+    /* position: absolute; */
+     /* position: absolute; 
+     z-index: 1;  */
 }
 .navegacion ul {
     display: flex;
     flex-direction: row;
     list-style: none;
-    margin-left: 500px;
+    margin-left: 700px;
     margin-top: 40px;
     font-size: 1.2em;
 }
 
 .navegacion ul li {
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .navegacion ul li a {
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     opacity: 0.7;
     font-size: 0.95em;
 }
 
 .navegacion ul li a:hover {
-    color: rgb(179, 179, 179);
-    border: solid 1px cyan;
+    /* color: rgb(43, 43, 43); */
+    box-shadow: 0px 2px 0px 0px rgb(94, 94, 94);
+    
 }
 
 .carrito button {
     display: flex;
     flex-direction: row;
     margin-top: 23px;
-    margin-left: 440px;
+    margin-left: 40px;
     font-size: 2em;
     background-color: transparent;
     border: none;
     cursor: pointer;
-    opacity: 0.5;
+    opacity: 0.7;
 }
 
 .inicio-fondo h1{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-left: 400px;
-    margin-top: 230px;
+    margin-top: 450px;
     font-size: 2em;
     position: absolute;
     color:rgb(0, 0, 0);
@@ -65,8 +74,7 @@ body {
 }
 .inicio-fondo video {
     width: 100%;
-
-    /* opacity: 9; */
+    margin-top: 100px;
 }
 
 .contenedor {
@@ -74,9 +82,16 @@ body {
     justify-content: space-around;
     flex-wrap: wrap;
 }
+.contenedor .card{
+    transition: all 400ms ease;
+}
+.contenedor :hover{
+    box-shadow: 5px 5px 20px rgb(0,0,0,0.4);
+    transform: translateY(-1%);
+}
 
 .productos-destacados {
-    width: 100%;
+    width: 95%;
     font-size: 1.2em;
     margin: 20px 35px 20px;
 }
@@ -84,8 +99,10 @@ body {
 .card {
     width: 300px;
     text-align: center;
-    box-shadow: 0px 2.5px 0px 0px rgb(0, 0, 0);
+    box-shadow: 0px 2px 0px 0px rgb(94, 94, 94);
+    overflow: hidden;
 }
+
 
 .card img {
     width: 90%;
@@ -102,6 +119,7 @@ body {
     margin-top: 20px;
     background-color: black;
     color: white;
+    border: none;
 }
 
 .boton:hover {
@@ -124,9 +142,15 @@ body {
     justify-content: space-around;
     flex-wrap: wrap;
 }
-
+.ofertas .card-suplementos{
+    transition: all 400ms ease;
+}
+.ofertas :hover{
+    box-shadow: 5px 5px 20px rgb(0,0,0,0.4);
+    transform: translateY(-1%);
+}
 .titulo-ofertas {
-    width: 100%;
+    width: 95%;
     font-size: 1.2em;
     margin: 20px 35px 20px;
 }
@@ -134,8 +158,9 @@ body {
 .card-suplementos {
     width: 300px;
     text-align: center;
-    box-shadow: 0px 2.5px 0px 0px rgb(0, 0, 0);
+    box-shadow: 0px 2px 0px 0px rgb(94, 94, 94);
     margin-bottom: 90px;
+    overflow: hidden;
 }
 
 .card-suplementos img {
@@ -153,6 +178,7 @@ body {
     margin-top: 20px;
     background-color: black;
     color: white;
+    border: none;
 }
 
 .boton-suplementos:hover {
@@ -208,7 +234,7 @@ footer {
 
 .modal-content {
     display: flex;
-    width: 65%;
+    width: 70%;
     align-items: center;
     box-shadow: 0 1px 0px 0 rgb(182, 182, 182);
 }
@@ -224,20 +250,21 @@ footer {
 
 .modal-content p {
     font-size: 1em;
-    margin-left: 30%;
+    margin-right: 4px;
+    margin-left: 4px;
 }
 
 .total-content {
     font-size: 1.5em;
     margin-top: 20px;
     margin-bottom: 20px;
-    box-shadow: 0 1px 0px 0 rgb(182, 182, 182);
     width: 80vh;
     text-align: center;
+
 }
 
 .eliminar-boton {
-    margin-left: 35%;
+    margin-left: 300px;
     font-size: 1.3em;
     color: rgb(0, 0, 0);
     border: none;
@@ -249,4 +276,136 @@ footer {
 
 .eliminar-boton:hover {
     color: rgb(255, 0, 0);
+}
+.restar{
+    font-size: 1.2em;
+    margin-left: 200px;
+    margin-bottom: 2px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+.sumar{
+    font-size: 1.2em;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+.sumar:hover{
+    color: rgb(97, 97, 97);
+}
+.restar:hover{
+    color: rgb(97, 97, 97);
+}
+.precio {
+    padding: 60px;
+    padding-right: 20px;
+}
+.boton-finalizar{
+    font-size: 1em;
+    background-color: black;
+    color: white;
+    border: none;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 50vh;
+    text-align: center;
+}
+.boton-finalizar:hover{
+    background-color: rgb(31, 28, 28);
+}
+footer{
+    display: flex;
+    flex-direction: row;
+}
+.navegacion2{
+    display: flex;
+    flex-direction: column;
+    margin-left: 400px;
+    
+}
+.navegacion2 h3{
+    font-size: 1.3em;
+    color: white;
+    margin-top: 50px;
+    font-weight: 900;
+    
+}
+.navegacion2 ul li {
+    margin-top: 25px;
+    list-style: none;
+    text-decoration: none;
+    font-size: 0.90em;
+}
+.navegacion2  a {
+    text-decoration: none;
+    color: white;
+}
+.medios-de-pagos h3{
+    color: white;
+    font-size: 1.3em;
+    margin-top: 50px;
+    width: 300px;
+    font-weight: 900;
+    margin-bottom: 25px;
+}
+.medios-de-pagos{
+    margin-left: 100px;
+    width: 250px;
+}
+.medios-de-pagos img{
+    width: 35px;
+    margin-left: 2px;
+    margin-bottom: 5px;
+}
+.inscribirse h3{
+    font-size: 1.3em;
+    color: white;
+    font-size: 1.4em;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    font-weight: 900;
+}
+.inscribirse{
+    width: 350px;
+    margin-left: 70px;
+}
+.inscribirse p{
+    font-size: 1em;
+    width:250px;
+    color: white;
+}
+.formulario input{
+    width: 250px;
+    height: 35px;
+    margin-top: 20px;
+    background-color: rgb(73, 73, 73);
+    border: none;
+    font-size: 1em;
+    
+}
+.boton-enviar{
+    width: 90px;
+    height: 40px;
+    background-color: black;
+    border: none;
+    color: white;
+    font-size: 0.79em;
+    font-weight:1000;
+    margin-top: 20px;
+}
+.contacto p{
+    margin-top: 20px;
+}
+.final{
+    height: 80px;
+    background-color: rgb(73, 73, 73);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:rgb(121, 120, 120);
+}
+.final h3{
+    font-size: 0.8em;
 }

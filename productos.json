@@ -1,0 +1,31 @@
+[
+    {
+        "id": 1,
+        "nombre": "Remera Oversize",
+        "precio": 5999,
+        "cantidad": 1,
+        "img": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/511/342/products/share-6bfd7552-72be-41e5-9c66-ba4ad19820991-aca428a0bb2a03f73b16834034690168-640-0.webp"
+    },
+    {
+        "id": 2,
+        "nombre": "Musculosa Cerrada",
+        "precio": 4299,
+        "cantidad": 1,
+        "img": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/511/342/products/img_07451-1f83bd3553d10a571816818497209153-640-0.webp"
+    },
+    {
+        "id": 3,
+        "nombre": "Musculosa Abierta",
+        "precio": 4299,
+        "cantidad": 1,
+        "img": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/511/342/products/whatsapp-image-2022-12-25-at-16-36-511-70f763d793d0babb3016719972657678-640-0.webp"
+    },
+    {
+        "id": 4,
+        "nombre": "Remera Slim Fit",
+        "precio": 4499,
+        "cantidad": 1,
+        "img": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/511/342/products/img_31231-e9aae3c76c54cd349e16525671965336-640-0.webp"
+    }
+]
+
